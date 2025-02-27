@@ -35,7 +35,7 @@ Infrastructure:
 
 ### Directory Structure
 
-```
+```text
 # For Backend Services (e.g., Node.js/Express)
 src/
 ├── routes/          # API routes
@@ -87,7 +87,7 @@ export function ComponentName({ prop1, prop2 }: Props): JSX.Element {
 
 The memlog system follows a hierarchical structure to optimize organization and token usage:
 
-```
+```text
 memlog/
 ├── active/                 # Active tasks and current status
 │   ├── log-aggregator.md
