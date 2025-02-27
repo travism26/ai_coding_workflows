@@ -1,6 +1,6 @@
 # AI Coding Workflows
 
-A collection of tools, templates, and best practices for enhancing AI-assisted coding workflows.
+A collection of tools, templates, and best practices for enhancing AI-assisted coding workflows. The goal of this repo is to create a efficent AI workflow that doesnt spead to much $ and also allows the coding assistent to be effective in large scale code bases.
 
 ## Projects
 
@@ -123,17 +123,46 @@ A template for creating AI rules and guidelines documents for your projects. Thi
 ## Getting Started
 
 1. Clone this repository
-2. Explore the available templates and tools
-3. Copy the relevant templates to your project
-4. Customize them to fit your specific needs
-5. Implement the workflows in your development process
-6. You first prompt should be something like:
+2. Copy this directory into your repo
+3. Add a `Custom Instructions` in you Cline Settings (Still work in Progress)
 
-```text
-I am sharing a AI_RULES_AND_GUIDELINES template below can you review this code base and create me a AI_RULES_AND_GUIDELINES.md following the template structure below. Make sure NOT to just blindly copy the template but refer to the code base as the source of truth.
+   ```text
+   You must strictly adhere to the rules and guidelines outlined in the AI_RULES_AND_GUIDELINES.md file for the [Project Name] project. Before responding to any request:
 
-<PASTE "AI_RULES_TEMPLATE.md">
-```
+   1. Check and Load Required Files:
+   - Review memlog/index.md for project status overview
+   - Load the relevant active task file from memlog/active/
+   - Verify relevant shared tracking files in memlog/shared/
+
+   2. Task Management:
+   - Update active task files with timestamped progress
+   - Cross-reference related tasks across projects when applicable
+   - Consider task archival needs (tasks older than 2 weeks)
+   - Maintain standardized file formats as specified in the memlog documentation
+
+   3. Response Requirements:
+   - Break down tasks into clear, numbered steps with explanations
+   - Follow all coding, security, and documentation practices from the guidelines
+   - Flag any actions that contradict the rules immediately
+   - Document both actions and reasoning
+   - Verify step completion before proceeding
+
+   4. File Updates:
+   - Add detailed timestamps for all updates
+   - Keep active files focused on current and upcoming tasks
+   - Maintain only the last 2 weeks of updates in active files
+   - Update the index file to reflect current project status
+
+   Your responses must demonstrate compliance with these guidelines, and you should actively reference them when providing assistance or generating code. Failure to follow these rules is not an option.
+   ```
+
+4. Get cline to create your `AI_RULES_AND_GUIDELINES.md` using the below prompt:
+
+   ```text
+   I am sharing a AI_RULES_AND_GUIDELINES template below can you review this code base and create me a AI_RULES_AND_GUIDELINES.md following the template structure below. Make sure NOT to just blindly copy the template but refer to the code base as the source of truth.
+
+   <PASTE "AI_RULES_TEMPLATE.md">
+   ```
 
 ## Contributing
 
